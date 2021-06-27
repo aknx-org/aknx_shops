@@ -2,6 +2,10 @@ fx_version 'bodacious'
 
 game 'gta5'
 
+shared_scripts {
+    'config.lua',
+    'traduction.lua',
+}
 
 client_scripts {
     -- RageUI
@@ -15,7 +19,6 @@ client_scripts {
     "RageUI/menu/panels/*.lua",
     "RageUI/menu/windows/*.lua",
     --
-    'config.lua',
     'client/main.lua',
     'client/menu.lua',
 }

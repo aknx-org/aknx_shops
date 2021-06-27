@@ -1,5 +1,8 @@
 config = {
 
+	isLimit = true,
+	GetESX = "esx:getSharedObject",
+
     marker = {
         haveMarker = true,
         Size = 0.2,

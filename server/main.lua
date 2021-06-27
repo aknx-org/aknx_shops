@@ -9,11 +9,12 @@ AddEventHandler("aknx:buyItem", function(label, item, price, amount)
         if xPlayer.canCarryItem(item, amount) then
             xPlayer.removeMoney(totalPrice)
             xPlayer.addInventoryItem(item, amount)
-            TriggerClientEvent('esx:showNotification', _source, "")
+            TriggerClientEvent('esx:showNotification', _source, TRADUCTION.ITEM_BOUGHT.." "..amount.." "..item)
         else
-
+            TriggerClientEvent('esx:showNotification', _source, TRADUCTION.PLAYER_CANNOT_HOLD)
         end
     else
-
+        local missingMoney = totalPrice - xPlayer.getMoney()
+        TriggerClientEvent('esx:showNotification', _source, TRADUCTION.PLAYER_CANNOT_HOLD.." "..missingMoney.."$")
     end
 end)

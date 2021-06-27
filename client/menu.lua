@@ -5,6 +5,8 @@ mainMenu.Closed = function()
     RageUI.Visible(mainMenu, false)
 end
 local payement = RageUI.CreateSubMenu(mainMenu, "Supérette", "Magasin")
+local index = 1
+local max = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 
 function openSuperette()
     if open then
@@ -26,6 +28,17 @@ function openSuperette()
                             end
                         }, payement)
                     end
+                end)
+
+                RageUI.IsVisible(payement, function()
+                    RageUI.List("Combien de "..shop_label.." ?", max, index, nil, {}, true, {
+                        onListChange = function(Index, Item)
+                            index = Index
+                        end
+                    })
+                    RageUI.Button("Acheter "..index.. " "..shops_label.." pour "..shops_price * index.." ?", nil, {}, true, {
+
+                    })
                 end)
                 Wait(1)
             end

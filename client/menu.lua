@@ -36,8 +36,10 @@ function openSuperette()
                             index = Index
                         end
                     })
-                    RageUI.Button("Acheter "..index.. " "..shops_label.." pour "..shops_price * index.." ?", nil, {}, true, {
-
+                    RageUI.Button("Acheter "..index.. " "..shop_label.." pour "..shop_price * index.."$ ?", nil, {}, true, {
+                        onSelected = function()
+                            TriggerServerEvent('aknx:buyItem', shop_label, shop_item, shop_price, index)
+                        end
                     })
                 end)
                 Wait(1)

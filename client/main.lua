@@ -17,7 +17,7 @@ Citizen.CreateThread(function()
                 if marker.haveMarker then
                     DrawMarker(marker.ID, v+0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, marker.Size, marker.Size, marker.Size, marker.Color[1], marker.Color[2], marker.Color[3], marker.Alpha, 0, 1, 2, 0, nil, nil, 0)
                 end
-                ESX.ShowHelpNotification("Appuyer sur [E] pour ouvrir la Superette")
+                ESX.ShowHelpNotification(TRADUCTION.PRESS_MENU)
                 if IsControlJustReleased(0, 38) then
                     openSuperette()
                 end

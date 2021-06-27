@@ -2,9 +2,9 @@ config = {
 
     marker = {
         haveMarker = true,
-        Size = 0.4,
-        ID = 36,
-        Color = {38, 215, 235},
+        Size = 0.2,
+        ID = 27,
+        Color = {255, 255, 255},
         Alpha = 170
     },
     

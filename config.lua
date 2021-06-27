@@ -28,6 +28,19 @@ config = {
 		vector3(-707.5, -914.2, 18.2),
 		vector3(-1820.5, 792.5, 137.1),
 		vector3(1698.3, 4924.4, 41.0),
-    }
+    },
+
+	items = {
+		{
+			name = "bread",
+			label = "Pain",
+			price = 100
+		},
+		{
+			name = "water",
+			label = "Eau",
+			price = 100
+		},
+	}
     
 }

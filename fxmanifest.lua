@@ -15,7 +15,9 @@ client_scripts {
     "RageUI/menu/panels/*.lua",
     "RageUI/menu/windows/*.lua",
     --
-    'client.lua',
+    'config.lua',
+    'client/main.lua',
+    'client/menu.lua',
 }
 
 server_scripts {
